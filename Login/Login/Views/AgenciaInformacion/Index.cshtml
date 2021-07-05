@@ -105,24 +105,24 @@
 
                                    <button onclick="mostrador('#dos');" type="button" class="btn  btn-outline-primary m-1 ml-5" style="font-size:1rem;" value="@item">@item</button>
                             }*@
-                            <button onclick="mostrador('#dos');" type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">Ingresos Históricos</button>
-                            <button type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">Socioeconómica</button>
-                            <button type="button" class="btn  btn-outline-success m-1" style="font-size:1rem;">Ingresos por Persona</button>
-                            <button type="button" class="btn  btn-outline-danger m-1" style="font-size:1rem;">Ingresos Regionales</button>
-                            <button type="button" class="btn  btn-outline-warning m-1" style="font-size:1rem;">Chile</button>
-                            <button type="button" class="btn  btn-outline-info m-1" style="font-size:1rem;">Región</button>
-                            <button type="button" class="btn  btn-outline-primary m-1" style="font-size:1rem;">Antofagasta</button>
-                            <button type="button" class="btn  btn-outline-dark m-1" style="font-size:1rem;">Periodo 2006-2017</button>
-                            <button type="button" class="btn  btn-outline-primary m-1" style="font-size:1rem;">Ingresos Promedio Mensual (CLP/mes) </button>
-                            <button type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">Encuestas CASEN entre 2006 y 2017</button>
+                            <button onclick="mostrador('#dos');" type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">@ViewBag.Grafico.coleccion</button>
+                            <button type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">@ViewBag.Grafico.sector</button>
+                            <button type="button" class="btn  btn-outline-success m-1" style="font-size:1rem;">@ViewBag.Grafico.tema</button>
+                            <button type="button" class="btn  btn-outline-danger m-1" style="font-size:1rem;">@ViewBag.Grafico.contenido</button>
+                            <button type="button" class="btn  btn-outline-warning m-1" style="font-size:1rem;">@ViewBag.Grafico.pais</button>
+                            <button type="button" class="btn  btn-outline-info m-1" style="font-size:1rem;">@ViewBag.Grafico.escala</button>
+                            <button type="button" class="btn  btn-outline-primary m-1" style="font-size:1rem;">@ViewBag.Grafico.territorio</button>
+                            <button type="button" class="btn  btn-outline-dark m-1" style="font-size:1rem;">@ViewBag.Grafico.temporalidad</button>
+                            <button type="button" class="btn  btn-outline-primary m-1" style="font-size:1rem;">@ViewBag.Grafico.unidad_medida </button>
+                            <button type="button" class="btn  btn-outline-secondary m-1" style="font-size:1rem;">@ViewBag.Grafico.fuente</button>
                             <button type="button" class="btn  btn-outline-success  m-1" style="font-size:1rem;">
-                                Evolución de Ingreso Promedio Mensual en la Región de Antofagasta para el periodo 2006-2017
+                                @ViewBag.Grafico.titulo
                             </button>
                             <button type="button" class="btn  btn-outline-danger m-1" style="font-size:1rem;">
-                                La región de Antofagasta es la que posee el ingreso medios mensual en el año 2017  entre las 16 regiones del país, con una cifra de algo más de 380 mil CLP/mes. En relación a la estimación anterior, del año 2015, el ingreso aumenta en un 7,3%.
+                                @ViewBag.Grafico.descripcion_larga
                             </button>
-                            <button type="button" class="btn  btn-outline-warning m-1" style="font-size:1rem;">Gráfico de Evolución</button>
-                            <button type="button" class="btn  btn-outline-info m-1" style="font-size:1rem;">Antofagasta,ingresos,CASEN,región,</button>
+                            <button type="button" class="btn  btn-outline-warning m-1" style="font-size:1rem;">@ViewBag.Grafico.visualizacion</button>
+                            <button type="button" class="btn  btn-outline-info m-1" style="font-size:1rem;">@ViewBag.Grafico.tag</button>
                         </div>
 
                     </div>
@@ -130,9 +130,9 @@
 
             </div>
 
-            <div class="col-md-6" id="dos" style="display:none">
+            <div class="col-md-6" id="dos" >
                 <div class="embed-responsive embed-responsive-16by9" >
-                    <iframe class="embed-responsive-item" style="width:800px;height:400px;" src="/info/dashboard?id=1059"></iframe>
+                    <iframe class="embed-responsive-item" style="width:800px;height:400px;" src="@ViewBag.Grafico.url"></iframe>
                 </div>
                 @*<iframe id='inlineFrameExample2' class="borrar" width="1050" height="460" src="/info/dashboard?id=1059">
                 </iframe>*@

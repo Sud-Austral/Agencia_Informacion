@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>paginabusqueda</title>
+</head>
+<body>
+    
+    @foreach (var item in ViewBag.Resultado)
+    {
+        <a style="color:red;" href="~/AgenciaInformacion/index/@item.id">@item.titulo</a>
+    }
+    <div> 
+    </div>
+</body>
+</html>

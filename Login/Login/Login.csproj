@@ -185,8 +185,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AGENCIA_INFORMACIONController.cs" />
     <Compile Include="Controllers\AgenciaInformacionController.cs" />
+    <Compile Include="Controllers\AGENCIA_INFORMACIONController.cs" />
     <Compile Include="Controllers\Bienvenido.cs" />
     <Compile Include="Controllers\ClentController.cs" />
     <Compile Include="Controllers\DataController.cs" />
@@ -3116,14 +3116,15 @@
     <Content Include="Views\Data\Contaminacion.cshtml" />
     <Content Include="Views\Data\IngresosCasen.cshtml" />
     <Content Include="Views\Data\IndexProductos.cshtml" />
+    <Content Include="Views\AgenciaInformacion\Index.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos1.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Create.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Delete.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Details.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Edit.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Index.cshtml" />
-    <Content Include="Views\AgenciaInformacion\Index.cshtml" />
-    <Content Include="Views\AgenciaInformacion\VisualizarGraficos.cshtml" />
-    <Content Include="Views\AgenciaInformacion\VisualizarGraficos1.cshtml" />
+    <Content Include="Views\AgenciaInformacion\paginabusqueda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

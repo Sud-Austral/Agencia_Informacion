@@ -12,7 +12,7 @@ namespace Login.Controllers
 {
     public class AGENCIA_INFORMACIONController : Controller
     {
-        private graficosEntities db = new graficosEntities();
+        private agenciaEntities1 db = new agenciaEntities1();
 
         // GET: AGENCIA_INFORMACION
         public ActionResult Index()
