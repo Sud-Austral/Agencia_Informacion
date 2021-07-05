@@ -60,7 +60,8 @@ public partial class graficosEntities : DbContext
 
     public virtual DbSet<DATA_GRAFICO> DATA_GRAFICO { get; set; }
 
-}
+        public System.Data.Entity.DbSet<Login.Models.AGENCIA_INFORMACION> AGENCIA_INFORMACION { get; set; }
+    }
 
 }
 
