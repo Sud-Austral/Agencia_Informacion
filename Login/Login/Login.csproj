@@ -186,6 +186,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AGENCIA_INFORMACIONController.cs" />
+    <Compile Include="Controllers\AgenciaInformacionController.cs" />
     <Compile Include="Controllers\Bienvenido.cs" />
     <Compile Include="Controllers\ClentController.cs" />
     <Compile Include="Controllers\DataController.cs" />
@@ -3120,9 +3121,14 @@
     <Content Include="Views\AGENCIA_INFORMACION\Details.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Edit.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Index.cshtml" />
+    <Content Include="Views\AgenciaInformacion\Index.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AgenciaInformacion1\" />
+    <Folder Include="Views\test2\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
