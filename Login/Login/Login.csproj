@@ -185,6 +185,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AgenciaInformacionController.cs" />
     <Compile Include="Controllers\Bienvenido.cs" />
     <Compile Include="Controllers\ClentController.cs" />
     <Compile Include="Controllers\DataController.cs" />
@@ -3077,10 +3078,15 @@
     <Content Include="Views\Data\Elecciones.cshtml" />
     <Content Include="Views\Data\Contaminacion.cshtml" />
     <Content Include="Views\Data\IngresosCasen.cshtml" />
-     <Content Include="Views\Data\IndexProductos.cshtml" />
+    <Content Include="Views\Data\IndexProductos.cshtml" />
+    <Content Include="Views\AgenciaInformacion\Index.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos.cshtml" />
+    <Content Include="Views\AgenciaInformacion\VisualizarGraficos1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AgenciaInformacion1\" />
+    <Folder Include="Views\test2\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
