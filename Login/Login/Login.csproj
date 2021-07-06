@@ -3118,17 +3118,16 @@
     <Content Include="Views\Data\IndexProductos.cshtml" />
     <Content Include="Views\AgenciaInformacion\Index.cshtml" />
     <Content Include="Views\AgenciaInformacion\VisualizarGraficos.cshtml" />
-    <Content Include="Views\AgenciaInformacion\VisualizarGraficos1.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Create.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Delete.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Details.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Edit.cshtml" />
     <Content Include="Views\AGENCIA_INFORMACION\Index.cshtml" />
     <Content Include="Views\AgenciaInformacion\paginabusqueda.cshtml" />
+    <Content Include="Views\Shared\_LayoutAgencia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AgenciaInformacion1\" />
     <Folder Include="Views\test2\" />
   </ItemGroup>
   <ItemGroup>

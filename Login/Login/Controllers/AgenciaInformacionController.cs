@@ -92,11 +92,7 @@ namespace Login.Controllers
             ViewBag.time2 = DateTime.Now;
             return PartialView();
         }
-        public PartialViewResult VisualizarGraficos1()
-        {
-
-            return PartialView();
-        }
+    
 
     }
 }
