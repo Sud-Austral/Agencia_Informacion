@@ -20,7 +20,7 @@
         <div class="row justify-content-md-between">
             <div class="col-12 col-md-4 text-left ">
                 <div class="row mt-2">
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-7 text-center">
                         <form action="~/AgenciaInformacion/PaginaBusqueda" method="get">
                             <input type="text" id="id" name="id" placeholder="Busqueda de palabras claves" style="padding: 6px; border: 1px solid #C6CCDC; border-top-left-radius: 3px; border-bottom-left-radius: 3px; font-size:0.8rem;">
                             <button id="search-button" type="submit" value="Submit" class="btn btn-danger">
@@ -28,7 +28,7 @@
                             </button>
                         </form>
                     </div>
-                    <div class="col-12 col-md-4 mt-1">
+                    <div class="col-12 col-md-4 mt-1 text-center">
                         <a class="btn btn-danger btn-sm " style="font-size: 14px; margin: 0px; width: 100px; cursor: pointer" href="javascript:history.back()"> Volver Atrás</a>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                 <button type="button" class="btn  btn-primary m-1" style="font-size: 0.8rem; width: 70%;">Unidad Medida</button>
             </div>
             <div class="col-11 col-md-2 mx-auto d-none d-md-block">
-                <button onclick="mostrador('#dos');" type="button" class="btn  btn-outline-secondary m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.coleccion</button>
+                <button type="button" class="btn  btn-outline-secondary m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.coleccion</button>
                 <button type="button" class="btn  btn-outline-secondary m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.sector</button>
                 <button type="button" class="btn  btn-outline-success m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.tema</button>
                 <button type="button" class="btn  btn-outline-danger m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.contenido</button>
@@ -122,39 +122,39 @@
                                             <strong>Contenidos: </strong>
                                             @ViewBag.Grafico.contenido
                                         </p>
-                                        <p class="mb-md-1">
+                                        <p class="mb-md-1 d-block d-md-none">
                                             <strong>País:</strong> Chile-
                                             @ViewBag.Grafico.pais
                                         </p>
-                                        <p class="mb-md-1">
+                                        <p class="mb-md-1 d-block d-md-none">
                                             <strong>Escala: </strong>
                                             @ViewBag.Grafico.escala
                                         </p>
-                                        <p class="mb-md-1">
-                                            <strong>@ViewBag.Grafico.territorio:</strong>
+                                        <p class="mb-md-1 d-block d-md-none">
+                                            <strong>Territorio:</strong>
 
                                             @ViewBag.Grafico.territorio
 
                                         </p>
-                                        <p class="mb-md-1 ">
-                                            <strong>Periodo: </strong>
+                                        <p class="mb-md-1 d-block d-md-none">
+                                            <strong>Temporalidad:</strong>
                                             @ViewBag.Grafico.temporalidad
                                         </p>
-                                        <p class="mb-md-1" style="margin-bottom:0px !important; "><Strong>Unidad de Medida:</Strong></p>
-                                        <p style="white-space: normal;">@ViewBag.Grafico.unidad_medida @*(@ViewBag.Grafico.unidad_medida)*@</p>
+                                        <p class="mb-md-1 d-block d-md-none" style="margin-bottom:0px !important; "><Strong>Unidad de Medida:</Strong></p>
+                                        <p class="d-block d-md-none" style="white-space: normal;">@ViewBag.Grafico.unidad_medida @*(@ViewBag.Grafico.unidad_medida)*@</p>
 
                                         <p class="mt-md-3 mb-md-0" style="margin-bottom:0px !important; "><strong>Fuente de Datos:</strong></p>
                                         <p class="mb-md-1">@ViewBag.Grafico.fuente</p>
 
-                                        <p class="mb-md-0 d-block d-md-none" style="margin-bottom:0px !important;"><strong>Título:</strong></p>
-                                        <p class="mb-md-0 d-block d-md-none">@ViewBag.Grafico.titulo</p>
+                                        <p class="mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Título:</strong></p>
+                                        <p class="mb-md-0 d-none d-md-block">@ViewBag.Grafico.titulo</p>
 
                                         <p style="margin-bottom:0px !important; " class="d-block d-md-none"><strong>Descripción:</strong></p>
                                         <p class="line-clamp2 d-block d-md-none mb-md-1" >
                                             @ViewBag.Grafico.descripcion_larga
                                         </p>
-                                        <p class="mt-md-3 mb-md-0 d-block d-md-none" style="margin-bottom:0px !important;"><strong>Visualización:</strong></p>
-                                        <p class="mb-md-1 d-block d-md-none">@ViewBag.Grafico.visualizacion</p>
+                                        <p class="mt-md-3 mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Visualización:</strong></p>
+                                        <p class="mb-md-1 d-none d-md-block">@ViewBag.Grafico.visualizacion</p>
                                     </div>
 
                                     <div class="col-md-4 col-10">
