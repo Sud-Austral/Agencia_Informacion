@@ -464,7 +464,7 @@
                         <div class="p-4" style="border:none !important;">
                             <h4 style="color:#000;" class="text-left">FILTROS</h4>
                             @*Boton para borrar los filtros*@
-                            <label class="btn btn-danger btn-sm text-center" style=" font-size: 14px; margin: 0px;max-width: 130px; min-width:120px; cursor: pointer;">
+                            <label class="btn btn-danger btn-sm text-center mb-3" style=" font-size: 14px; margin: 0px;max-width: 130px; min-width:120px; cursor: pointer;">
                                 <input style="display:none;" type="checkbox" onClick="ActivarCasilla(this), LimpiarTodo();" /> Borrar filtros
                             </label>
                             <ul class="list-unstyled mb-5 ">
@@ -684,12 +684,29 @@
                                                             @item.titulo <br />
                                                             @item.pais <br />
                                                             @item.sector
+
+
+                                                            <p style="display:none;">
+                                                                @item.coleccion
+                                                            </p>
+                                                            <p style="display:none;">
+                                                                @item.tema
+                                                            </p>
+                                                            <p style="display:none;">
+                                                                @item.contenido
+                                                            </p>
+                                                            <p style="display:none;">
+                                                                @item.escala
+                                                            </p>
+                                                            <p style="display:none;">
+                                                                @item.territorio
+                                                            </p>
                                                             @*<p style="display:none;">*@@*@item.TERRITORIO.auxiliar </p>
-                                                            <p style="display:none;">@item.TERRITORIO.nombre </p>
-                                                            <p style="display:none;">@item.PARAMETRO.nombre </p>
-                                                            <p style="display:none;">@item.CATEGORIA.PRODUCTO.SECTOR.nombre </p>
-                                                            <p style="display:none;">@item.CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA.nombre  </p>
-                                                            <p style="display:none;">@item.CATEGORIA.PRODUCTO.nombre </p>*@
+        <p style="display:none;">@item.TERRITORIO.nombre </p>
+        <p style="display:none;">@item.PARAMETRO.nombre </p>
+        <p style="display:none;">@item.CATEGORIA.PRODUCTO.SECTOR.nombre </p>
+        <p style="display:none;">@item.CATEGORIA.PRODUCTO.SECTOR.INDUSTRIA.nombre  </p>
+        <p style="display:none;">@item.CATEGORIA.PRODUCTO.nombre </p>*@
                                                         </a>
 
                                                     </div>@*}*@

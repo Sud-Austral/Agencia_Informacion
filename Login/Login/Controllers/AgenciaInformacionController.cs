@@ -18,16 +18,39 @@ namespace Login.Controllers
             return View();
         }
 
-        public ActionResult paginabusqueda(string id = "Título")
+        public ActionResult paginabusqueda(string id = "NO_RESULT")
         {
-            var union = db.AGENCIA_INFORMACION.Where(x => x.titulo.Contains(id) || x.tag.Contains(id));
+            IEnumerable<AGENCIA_INFORMACION> union;
+            if(id == "NO_RESULT")
+            {
+                union = db.AGENCIA_INFORMACION;
+            }
+            else
+            {
+                union = db.AGENCIA_INFORMACION.Where(x => x.titulo.Contains(id) || x.tag.Contains(id));
+            }
+            
             ViewBag.Resultado = union;
             ViewBag.num = union.Count();
+
+            
+            
+            //                                                     @item.tema
+            
+            //                                                      @item.contenido
+           
+            //                                                       @item.escala
+            
+            //                                                        @item.territorio
             List<string> Paises = new List<string>();
             List<string> Escala = new List<string>();
             List<string> TipoGrafico = new List<string>();
             List<string> Temporalidad = new List<string>();
             List<string> Producto = new List<string>();
+
+            List<string> Tema = new List<string>();
+            List<string> Contenido = new List<string>();
+            List<string> Coleccion = new List<string>();
             foreach (var item in union)
             {
                 if (!Paises.Contains(item.territorio))
@@ -46,6 +69,11 @@ namespace Login.Controllers
                 {
                     Temporalidad.Add(item.temporalidad);
                 }
+                if (!Producto.Contains(item.contenido))
+                {
+                    Producto.Add(item.contenido);
+                }
+                ///Nuevos
                 if (!Producto.Contains(item.contenido))
                 {
                     Producto.Add(item.contenido);

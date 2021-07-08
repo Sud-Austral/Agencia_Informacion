@@ -18,7 +18,7 @@ namespace Login
                 url: "{controller}/{action}/{id}",
                 //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
                 //defaults: new { controller = "Usuario", action = "Index", id = UrlParameter.Optional }
-                defaults: new { controller = "Usuario", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "AgenciaInformacion", action = "PaginaBusqueda", id = UrlParameter.Optional }
             );
         }
     }
