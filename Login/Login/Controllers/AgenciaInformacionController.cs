@@ -92,7 +92,11 @@ namespace Login.Controllers
             ViewBag.time2 = DateTime.Now;
             return PartialView();
         }
-    
+        
+        public ActionResult Home()
+        {
+            return View();
+        }
 
     }
 }
