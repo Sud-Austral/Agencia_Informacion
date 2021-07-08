@@ -32,14 +32,14 @@
                         <a class="btn btn-danger btn-sm " style="font-size: 14px; margin: 0px; width: 100px; cursor: pointer" href="javascript:history.back()"> Volver Atrás</a>
                     </div>
                 </div>
-                
+
             </div>
             <div class="col-12 col-md-8 text-center ">
                 <h5 class="mt-3">@ViewBag.Grafico.titulo</h5>
             </div>
         </div>
     </div>
-    
+
     <div class="container mb-5 mt-5">
         <div class="row justify-content-center">
             <div class="col-11 col-md-2 d-none d-md-block" style="text-align: right !important;">
@@ -63,7 +63,7 @@
                 <button type="button" class="btn  btn-outline-primary m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.territorio</button>
                 <button type="button" class="btn  btn-outline-dark m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.temporalidad</button>
                 <button type="button" class="btn  btn-outline-primary m-1" style="font-size: 0.8rem; width: 100%;">@ViewBag.Grafico.unidad_medida </button>
-               
+
             </div>
             <div class="col-md-8">
                 <div class="row">
@@ -77,158 +77,247 @@
                     </div>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <style>
-                            .line-clamp2 {
-                                display: -webkit-box;
-                                -webkit-line-clamp: 10;
-                                -webkit-box-orient: vertical;
-                                overflow-wrap: normal;
-                                overflow-y: hidden;
-                                width: 98%;
-                                margin: auto;
-                                font-family: sans-serif;
-                                line-height: 1.4;
+            <div class="row">
+                <div class="col-md-12">
+                    <style>
+                        .line-clamp2 {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 10;
+                            -webkit-box-orient: vertical;
+                            overflow-wrap: normal;
+                            overflow-y: hidden;
+                            width: 98%;
+                            margin: auto;
+                            font-family: sans-serif;
+                            line-height: 1.4;
+                        }
+
+                            .line-clamp2:hover {
+                                -webkit-line-clamp: 100;
+                                cursor: pointer;
                             }
+                    </style>
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-12" style="border:2px solid #e6e6e6; border-radius:15px; ">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-10 mt-3 mb-2 d-none d-md-block" style="border-right:0.5px solid #e6e6e6; white-space:normal;">
+                                    <p style="margin-bottom:0px !important; "><strong>Descripción:</strong></p>
 
-                                .line-clamp2:hover {
-                                    -webkit-line-clamp: 100;
-                                    cursor: pointer;
-                                }
-                        </style>
-                        <div class="row justify-content-center">
-                            <div class="col-md-12 col-12" style="border:2px solid #e6e6e6; border-radius:15px; ">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-10 mt-3 mb-2 d-none d-md-block" style="border-right:0.5px solid #e6e6e6; white-space:normal;">
-                                        <p style="margin-bottom:0px !important; "><strong>Descripción:</strong></p>
+                                    <p class='line-clamp2'>
+                                        @ViewBag.Grafico.descripcion_larga
+                                    </p>
 
-                                        <p class='line-clamp2'>
-                                            @ViewBag.Grafico.descripcion_larga
-                                        </p>
+                                </div>
+                                <div class="col-md-4 col-sm-10" style="border-right: 0.5px solid #e6e6e6; white-space: normal;">
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Colección: </strong>
+                                        @ViewBag.Grafico.coleccion
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Sectores: </strong>
+                                        @ViewBag.Grafico.sector
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Temas: </strong>
+                                        @ViewBag.Grafico.tema
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Contenidos: </strong>
+                                        @ViewBag.Grafico.contenido
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>País:</strong> Chile-
+                                        @ViewBag.Grafico.pais
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Escala: </strong>
+                                        @ViewBag.Grafico.escala
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Territorio:</strong>
 
-                                    </div>
-                                    <div class="col-md-4 col-sm-10" style="border-right: 0.5px solid #e6e6e6; white-space: normal;">
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Colección: </strong>
-                                            @ViewBag.Grafico.coleccion
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Sectores: </strong>
-                                            @ViewBag.Grafico.sector
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Temas: </strong>
-                                            @ViewBag.Grafico.tema
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Contenidos: </strong>
-                                            @ViewBag.Grafico.contenido
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>País:</strong> Chile-
-                                            @ViewBag.Grafico.pais
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Escala: </strong>
-                                            @ViewBag.Grafico.escala
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Territorio:</strong>
+                                        @ViewBag.Grafico.territorio
 
-                                            @ViewBag.Grafico.territorio
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none">
+                                        <strong>Temporalidad:</strong>
+                                        @ViewBag.Grafico.temporalidad
+                                    </p>
+                                    <p class="mb-md-1 d-block d-md-none" style="margin-bottom:0px !important; "><Strong>Unidad de Medida:</Strong></p>
+                                    <p class="d-block d-md-none" style="white-space: normal;">@ViewBag.Grafico.unidad_medida @*(@ViewBag.Grafico.unidad_medida)*@</p>
 
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none">
-                                            <strong>Temporalidad:</strong>
-                                            @ViewBag.Grafico.temporalidad
-                                        </p>
-                                        <p class="mb-md-1 d-block d-md-none" style="margin-bottom:0px !important; "><Strong>Unidad de Medida:</Strong></p>
-                                        <p class="d-block d-md-none" style="white-space: normal;">@ViewBag.Grafico.unidad_medida @*(@ViewBag.Grafico.unidad_medida)*@</p>
+                                    <p class="mt-md-3 mb-md-0" style="margin-bottom:0px !important; "><strong>Fuente de Datos:</strong></p>
+                                    <p class="mb-md-1">@ViewBag.Grafico.fuente</p>
 
-                                        <p class="mt-md-3 mb-md-0" style="margin-bottom:0px !important; "><strong>Fuente de Datos:</strong></p>
-                                        <p class="mb-md-1">@ViewBag.Grafico.fuente</p>
+                                    <p class="mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Título:</strong></p>
+                                    <p class="mb-md-0 d-none d-md-block">@ViewBag.Grafico.titulo</p>
 
-                                        <p class="mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Título:</strong></p>
-                                        <p class="mb-md-0 d-none d-md-block">@ViewBag.Grafico.titulo</p>
+                                    <p style="margin-bottom:0px !important; " class="d-block d-md-none"><strong>Descripción:</strong></p>
+                                    <p class="line-clamp2 d-block d-md-none mb-md-1">
+                                        @ViewBag.Grafico.descripcion_larga
+                                    </p>
+                                    <p class="mt-md-3 mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Visualización:</strong></p>
+                                    <p class="mb-md-1 d-none d-md-block">@ViewBag.Grafico.visualizacion</p>
+                                </div>
 
-                                        <p style="margin-bottom:0px !important; " class="d-block d-md-none"><strong>Descripción:</strong></p>
-                                        <p class="line-clamp2 d-block d-md-none mb-md-1" >
-                                            @ViewBag.Grafico.descripcion_larga
-                                        </p>
-                                        <p class="mt-md-3 mb-md-0 d-none d-md-block" style="margin-bottom:0px !important;"><strong>Visualización:</strong></p>
-                                        <p class="mb-md-1 d-none d-md-block">@ViewBag.Grafico.visualizacion</p>
-                                    </div>
+                                <div class="col-md-4 col-10">
+                                    <p class="mt-md-3 d-none d-md-block"><strong>Ver más información</strong></p>
+                                    <div class="row justify-content-center mb-md-3">
+                                        <!--<div class="col-md-5 col-10 text-center">-->
+                                        @*  <a href="https://dataintelligence.store/collections">*@
+                                                            <!--<img class="img-fluid mb-4" src="~/Content/image_UsuarioIndex/icono_informeinteractivo_AZUL.png" />
+                                        <button onclick="mostrador('#PBuno'); FiltrarII();" class="btn btn-danger" data-backdrop="True" style="font-size: 12px; width: 165px; border-radius: 25px; margin-left: 5px;">
+                                            Ver Informe Interactivo
+                                        </button>-->
+                                                            @* </a>*@
+                                                            <!--</div>
+                                        <div class="col-md-5 col-10 text-center">-->
+                                                            @*
+                                            <a href="https://dataintelligence.store/collections">*@
+                                                            <!--<img class="img-fluid mb-4 " src="~/Content/image_UsuarioIndex/icono_reporte360_VERDE.png" />
+                                        <button onclick="mostrador('#PBuno'); FiltrarReporte360();" class="btn btn-danger" data-backdrop="True" style="font-size:12px; width:165px; border-radius:25px;margin-left:5px;">
+                                            Ver Reporte 360°
+                                        </button>-->
+                                                            @*
+                                            </a>*@
+                                        <!--</div>-->
+                                        @*estilos para cortar los tags en 3 filas y ocultar los demas con la clase line-clam *@
+                                        <style>
+                                            .line-clamp {
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 3;
+                                                -webkit-box-orient: vertical;
+                                                overflow-wrap: normal;
+                                                overflow-y: hidden;
+                                                width: 98%;
+                                                margin: auto;
+                                                font-family: sans-serif;
+                                                line-height: 1.4;
+                                            }
 
-                                    <div class="col-md-4 col-10">
-                                        <p class="mt-md-3 d-none d-md-block" ><strong>Ver más información</strong></p>
-                                        <div class="row justify-content-center mb-md-3">
-                                            <!--<div class="col-md-5 col-10 text-center">-->
-                                            @*  <a href="https://dataintelligence.store/collections">*@
-                                            <!--<img class="img-fluid mb-4" src="~/Content/image_UsuarioIndex/icono_informeinteractivo_AZUL.png" />
-                                    <button onclick="mostrador('#PBuno'); FiltrarII();" class="btn btn-danger" data-backdrop="True" style="font-size: 12px; width: 165px; border-radius: 25px; margin-left: 5px;">
-                                        Ver Informe Interactivo
-                                    </button>-->
-                                            @* </a>*@
-                                            <!--</div>
-                                    <div class="col-md-5 col-10 text-center">-->
-                                            @*
-                                        <a href="https://dataintelligence.store/collections">*@
-                                            <!--<img class="img-fluid mb-4 " src="~/Content/image_UsuarioIndex/icono_reporte360_VERDE.png" />
-                                    <button onclick="mostrador('#PBuno'); FiltrarReporte360();" class="btn btn-danger" data-backdrop="True" style="font-size:12px; width:165px; border-radius:25px;margin-left:5px;">
-                                        Ver Reporte 360°
-                                    </button>-->
-                                            @*
-                                        </a>*@
-                                            <!--</div>-->
-                                            @*estilos para cortar los tags en 3 filas y ocultar los demas con la clase line-clam *@
-                                            <style>
-                                                .line-clamp {
-                                                    display: -webkit-box;
-                                                    -webkit-line-clamp: 3;
-                                                    -webkit-box-orient: vertical;
-                                                    overflow-wrap: normal;
-                                                    overflow-y: hidden;
-                                                    width: 98%;
-                                                    margin: auto;
-                                                    font-family: sans-serif;
-                                                    line-height: 1.4;
+                                                .line-clamp:hover {
+                                                    -webkit-line-clamp: 100;
+                                                    cursor: pointer;
                                                 }
+                                        </style>
 
-                                                    .line-clamp:hover {
-                                                        -webkit-line-clamp: 100;
-                                                        cursor: pointer;
-                                                    }
-                                            </style>
-
-                                            <div class="row justify-content-center">
-                                                <div class="col-md-12">
-                                                    <button onclick="compartir('@ViewBag.Grafico.url')">hola</button>
-                                                    <p class="mt-md-3 mb-md-1" style="margin-bottom:0px !important;"><strong>Tags:</strong></p>
-                                                    <p id="tagsGrafico" class='line-clamp'>@ViewBag.Grafico.tag</p>
-                                                </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-12">
+                                                <button class="btn-primary">Descargar</button>
+                                                <button class="btn-success ml-md-2" onclick="compartir('@ViewBag.Grafico.url')">Compartir</button>
+                                                <p class="mt-md-3 mb-md-1" style="margin-bottom:0px !important;"><strong>Tags:</strong></p>
+                                                <p id="tagsGrafico" class='line-clamp'>@ViewBag.Grafico.tag</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
+                        <div class="col-md-12">
+                            <!-- 16:9 aspect ratio -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://dataintelligence.store/blogs/noticias"></iframe>
+                            </div>
+                        </div>
+                        
                     </div>
+
                 </div>
-            
+            </div>
+
         </div>
     </div>
+   
+    
+
+    @*test*@
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Compartir</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            @*<div class="col-md-10">.col-md-4</div>*@
+                            <div class="col-md-6 ms-auto">
+                                <input type="text" id="urliframe" name="urliframe" value="@ViewBag.Grafico.url">
+                            </div>
+                            <div class="col-md-6 ms-auto">
+                                <button onclick="copiarurlIframe()" class="btn-primary">Copiar</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @*<div class="col-md-10">.col-md-4</div>*@
+                            <div class="col-md-6 ms-auto">
+                                <input type="text" id="codigoIframe" name="codigoIframe" value='<iframe width="600" height="373.5" src="@ViewBag.Grafico.url" frameborder="0" allowFullScreen="true"></iframe>'>
+                            </div>
+                            <div class="col-md-6 ms-auto">
+                                <button onclick="copiarcodigoIframe()" class="btn-primary">Copiar</button>
+                            </div>
+                        </div>
+                        @*<div class="row">
+            <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+            <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                Level 1: .col-sm-9
+                <div class="row">
+                    <div class="col-8 col-sm-6">
+                        Level 2: .col-8 .col-sm-6
+                    </div>
+                    <div class="col-4 col-sm-6">
+                        Level 2: .col-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    @*<button type="button" class="btn btn-primary">Save changes</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        function compartir(url) {
-            alert(url);
-            alert('<iframe width="600" height="373.5" src="'+ url +'" frameborder="0" allowFullScreen="true"></iframe>');
+        function copiarcodigoIframe() {
+            $("#codigoIframe").focus();
+            $("#codigoIframe").select();
+            document.execCommand("copy")
+        }
+        function copiarurlIframe() {
+            $("#urliframe").focus();
+            $("#urliframe").select();
+            document.execCommand("copy");
+           
         }
     </script>
+    @*script para que funciones los popover de bootstrap5 son parecidos a los tooltips*@
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+    @*script para que funciones los popover de bootstrap5 son parecidos a los tooltips*@
 </body>
 </html>
 
