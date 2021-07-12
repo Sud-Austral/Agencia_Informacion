@@ -327,7 +327,8 @@
     <Content Include="Content\assets Home page\img\clients\client-6.png" />
     <Content Include="Content\assets Home page\img\favicon.png" />
     <Content Include="Content\assets Home page\img\footer-bg.jpg" />
-    <Content Include="Content\assets Home page\img\hero-bg.jpg" />
+    <Content Include="Content\assets Home page\img\hero-bg1.jpg" />
+    <Content Include="Content\assets Home page\img\hero-bg.png" />
     <Content Include="Content\assets Home page\img\our-values-1.jpg" />
     <Content Include="Content\assets Home page\img\our-values-2.jpg" />
     <Content Include="Content\assets Home page\img\our-values-3.jpg" />
