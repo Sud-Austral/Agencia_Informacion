@@ -69,11 +69,10 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         @*<h2>@ViewBag.Grafico.titulo</h2>*@
-                        <iframe id="Imprimeme" 
-                                class="pruebarara" 
-                                style="width:100%; height:460px;" 
-                                src="@ViewBag.Grafico.url">
-                        </iframe>
+                        <iframe id="Imprimeme"
+                                class="pruebarara"
+                                style="width:100%; height:460px;"
+                                src="@ViewBag.Grafico.url"></iframe>
                     </div>
                 </div>
             </div>
@@ -203,12 +202,12 @@
 
                                         <div class="row justify-content-center">
                                             <div class="col-md-12">
-                                               
+
                                                 @*<button class="btn-primary">Descargar</button>
                                                     <button class="btn-success ml-md-2" onclick="compartir('@ViewBag.Grafico.url')">Compartir</button>*@
                                                 <p class="mt-md-3 mb-md-1" style="margin-bottom:0px !important;"><strong>Tags:</strong></p>
                                                 <p id="tagsGrafico" class='line-clamp'>@ViewBag.Grafico.tag</p>
-                                                 <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                     Compartir
                                                 </button>
                                             </div>
@@ -287,6 +286,30 @@
             document.execCommand("copy");
         }
     </script>
+    <script>
+        $(".line-clamp").text($(".line-clamp").text().split(",").join(", "));
+        function construirEstructura(Concepto) {
+            Concepto = Concepto.trim();
+            return '<a href="/info/PaginaBusqueda?id=' + Concepto + '">' + Concepto + '</a>';
+
+        }
+        //var lista = [1, 2, 3, 4]
+        //lista.map(alert);
+        function estructura() {
+            // En esta linea, se transforma el texto del elemento #Gustavo en una lista separando el String por ,
+            var lista = $("#tagsGrafico").text().split(",") //["hola1", "hola2", "hola3"]
+            // A cada elemento de la lista se le aplioca la funcion construirEstructura
+            // La funcion construirEstructura toma un elemento y devuelve un elemento link (en este caso <a>)
+            var listaEstructurada = lista.map(construirEstructura)
+            // Esta variable vuelve a unir toda la lista en un solo String
+            var salida = listaEstructurada.join(", ")
+            // Setea el contenido del elemento #Gustavo con el String creado anteriormente
+            $("#tagsGrafico").html(salida)
+            return salida;
+        }
+        estructura();
+    </script>
+
     @*script para el modal con el codigo de iframe y el link de grafico*@
 </body>
 </html>
