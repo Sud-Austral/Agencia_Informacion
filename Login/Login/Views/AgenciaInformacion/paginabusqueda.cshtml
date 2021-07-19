@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="offcanvas offcanvas-start w-50 d-md-none" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="true" style="overflow:scroll;">
+    <div class="offcanvas offcanvas-start w-75 d-md-none" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="true" style="overflow:scroll;">
         <style>
             .cancel {
                 display: block;
@@ -189,25 +189,146 @@
 
                 });
             </script>
+            <!--*****************************************************-->
+            <div class="col-sm-3">
+                <div class=" border rounded-3 p-1  d-block d-sm-block d-md-none" style="background-color: #DBDDE9;">
+                    <nav id="sidebar">
 
+                        <div class="p-4" style="border:none !important;">
+                            <h4 style="color:#000;" class="text-left">FILTROS</h4>
+                            @*Boton para borrar los filtros*@
+                            <label class="btn btn-danger btn-sm text-center mb-3" style=" font-size: 14px; margin: 0px;max-width: 130px; min-width:120px; cursor: pointer;">
+                                <input style="display:none;" type="checkbox" onClick="ActivarCasilla(this), LimpiarTodo();" /> Borrar filtros
+                            </label>
+                            <ul class="list-unstyled mb-5 ">
+                                @*<li class="mb-md-3">
+                                <a style="background-color: #B4B4B5; text-decoration:none; " href="#pageSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle  flex-shrink-1 ">COLECCIÓN</a>
+
+                                <ul class="collapse list-unstyled" id="pageSubmenu1">
+                                    @foreach (var item1 in ViewBag.Sector)
+                                    {
+                                        <label style="width: 100%;">
+                                        <li style="margin: 5px !important; color: #000; cursor: pointer;"><input type="checkbox" class="name" name="name" value="@item1"> @item1</li>
+                                        </label>
+                                    }
+
+                                </ul>
+                            </li>*@
+                                @*<li class="mb-md-3">
+                                <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">SECTOR</a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                                    @foreach (var item1 in ViewBag.Industria)
+                                    {
+                                        <label style="width: 100%;">
+                                        <li style="margin: 5px !important; color: #000; cursor: pointer; width:100%; "><input type="checkbox" class="name" name="name" value="@item1"> @item1</li>
+                                        </label>
+                                    }
+
+                                </ul>
+                            </li>*@
+                                <li class="mb-md-3">
+                                    <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TEMA</a>
+                                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                                        @foreach (var item1 in ViewBag.Producto)
+                                        {
+                                            <label style="width: 100%;">
+                                            <li style="margin: 5px !important; color: #000; cursor: pointer; "><input type="checkbox" class="name" name="name" value="@item1"> @item1</li>
+                                            </label>
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li class="mb-md-3">
+                                    <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TIPO DE GRÁFICO</a>
+                                    <ul class="collapse list-unstyled" id="pageSubmenu4">
+                                        @foreach (var item4 in ViewBag.TipoGrafico)
+                                        {
+                                            switch (item4)
+                                            {
+                                                case "Informe Interactivo":
+                                                    <label style="width: 100%;">
+                                                    <li style="margin: 5px !important; color: #000; cursor: pointer; "><input id="@item4.Replace(" ","_")" type="checkbox" class="name" name="name" value="@item4"> @item4</li>
+                                                    </label>
+                                                    break;
+                                                case "Reporte 360°":
+                                                    <label style="width: 100%;">
+                                                    <li style="margin: 5px !important; color: #000; cursor: pointer; "><input id="@item4.Replace(" ","_").Replace("°","")" type="checkbox" class="name" name="name" value="@item4"> @item4</li>
+                                                    </label>
+                                                    break;
+                                                default:
+                                                    <label style="width: 100%;">
+                                                    <li style="margin: 5px !important; color: #000; cursor: pointer; "><input type="checkbox" class="name" name="name" value="@item4"> @item4</li>
+                                                    </label>
+                                                    break;
+                                            }/**/
+                                            /**/
+                                            /**/
+
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li class="mb-md-3">
+                                    <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ESCALA</a>
+                                    <ul class="collapse list-unstyled" id="pageSubmenu5">
+                                        @foreach (var item1 in ViewBag.Escala)
+                                        {
+                                            <label style="width: 100%;">
+                                            <li style="margin: 5px !important; color: #000; cursor: pointer; "><input type="checkbox" class="name" name="name" value="@item1"> @item1</li>
+                                            </label>
+                                        }
+
+                                    </ul>
+                                </li>
+                                <li class="mb-md-3">
+                                    <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TERRITORIO</a>
+                                    <ul class="collapse list-unstyled" id="pageSubmenu6">
+                                        @foreach (var item6 in ViewBag.Paises)
+                                        {
+                                            <label class="territorio" style="width: 100%;">
+                                            <li style="margin: 5px !important; color: #000; cursor: pointer;"><input type="checkbox" class="name" name="name" value="@item6.Split('-')[0]"> @item6.Split('-')[0]</li>
+                                            </label>}
+
+
+                                    </ul>
+                                </li>
+                                @*<li class="mb-md-3">
+                                <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">PARÁMETRO</a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu7">
+                                    @foreach (var item1 in ViewBag.Parametro)
+                                    {
+                                        <label style="width: 100%;">
+                                        <li style="margin: 5px !important; color: #000; cursor: pointer;"><input type="checkbox" class="name" name="name" value="@item1"> @item1</li>
+                                        </label>
+                                    }
+
+                                </ul>
+                            </li>*@
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!--*****************************************************-->
             @*<h4 class="mt-3 dropdown-header">COLECCIÓN</h4>
-            <div class="side mb-5" style="overflow:scroll; max-height:250px; overflow:hidden;">
+        <div class="side mb-5" style="overflow:scroll; max-height:250px; overflow:hidden;">
 
-                @foreach (var item1 in ViewBag.Sector)
-                {
-                    <div>
-                        <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item1"> @item1</label>
-                    </div>
-                }
-            </div>*@
+            @foreach (var item1 in ViewBag.Sector)
+            {
+                <div>
+                    <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item1"> @item1</label>
+                </div>
+            }
+        </div>*@
             @*<h4 class="dropdown-header">SECTOR</h4>
-            <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
-                @foreach (var item2 in ViewBag.Industria)
-                {
-                    <div>
-                        <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item2"> @item2</label>
-                    </div>}
-            </div>*@
+        <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
+            @foreach (var item2 in ViewBag.Industria)
+            {
+                <div>
+                    <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item2"> @item2</label>
+                </div>}
+        </div>*@
             <h4 class="dropdown-header">TEMA</h4>
             <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
                 @foreach (var item3 in ViewBag.Producto)
@@ -235,7 +356,7 @@
                                 <label><input type="checkbox" class="name" name="name" value="@item4"> @item4</label>
                             </div>break;
                     }
-                 }
+                }
             </div>
             <h4 class="dropdown-header">ESCALA</h4>
             <div class="side mb-5" style="overflow:scroll; max-height:250px; overflow:hidden;">
@@ -256,13 +377,13 @@
             </div>
 
             @*<h4 class="dropdown-header">PARÁMETRO</h4>
-            <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
-                @foreach (var item7 in ViewBag.Parametro)
-                {
-                    <div>
-                        <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item7"> @item7</label>
-                    </div>}
-            </div>*@
+        <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
+            @foreach (var item7 in ViewBag.Parametro)
+            {
+                <div>
+                    <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item7"> @item7</label>
+                </div>}
+        </div>*@
 
         </div>
 
@@ -285,9 +406,9 @@
         </script>
     </div>
     @***************comienzo de prueba de filtros****************************@
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col mr-2">
                 <!--boton de menu lateral en movil-->
                 <button class="button btn float-end d-sm-flex d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
                     <i class="fas fa-filter" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">Filtros</i>
