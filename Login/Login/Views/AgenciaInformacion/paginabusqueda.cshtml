@@ -238,7 +238,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="mb-md-3">
+                                <li class="mb-md-3 mt-2">
                                     <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TIPO DE GRÁFICO</a>
                                     <ul class="collapse list-unstyled" id="pageSubmenu4">
                                         @foreach (var item4 in ViewBag.TipoGrafico)
@@ -268,7 +268,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="mb-md-3">
+                                <li class="mb-md-3 mt-2">
                                     <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ESCALA</a>
                                     <ul class="collapse list-unstyled" id="pageSubmenu5">
                                         @foreach (var item1 in ViewBag.Escala)
@@ -280,7 +280,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="mb-md-3">
+                                <li class="mb-md-3 mt-2">
                                     <a style="background-color: #B4B4B5; text-decoration: none; " href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TERRITORIO</a>
                                     <ul class="collapse list-unstyled" id="pageSubmenu6">
                                         @foreach (var item6 in ViewBag.Paises)
@@ -311,24 +311,7 @@
                 </div>
             </div>
             <!--*****************************************************-->
-            @*<h4 class="mt-3 dropdown-header">COLECCIÓN</h4>
-        <div class="side mb-5" style="overflow:scroll; max-height:250px; overflow:hidden;">
-
-            @foreach (var item1 in ViewBag.Sector)
-            {
-                <div>
-                    <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item1"> @item1</label>
-                </div>
-            }
-        </div>*@
-            @*<h4 class="dropdown-header">SECTOR</h4>
-        <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
-            @foreach (var item2 in ViewBag.Industria)
-            {
-                <div>
-                    <label style="margin-bottom:0 !important;"><input type="checkbox" class="name" name="name" value="@item2"> @item2</label>
-                </div>}
-        </div>*@
+           
             <h4 class="dropdown-header">TEMA</h4>
             <div class="side mb-5" style="overflow:scroll; max-height:100px; overflow:hidden;">
                 @foreach (var item3 in ViewBag.Producto)
